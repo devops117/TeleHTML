@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="telegram client: TeleHTML">
+  <title>TeleHTML</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    .send-message-text {
+      width: min(100%, 500px);
+    }
+    nav,#current-messages,#chatlog {
+      margin-top: 15px;
+    }
+    #current-messages > iframe {
+      height: 150px;
+      width: 100%;
+    }
+    #chatlog > iframe {
+      height: 200px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <nav>
+    <p>
+      <!---FIXME: chat-name--->
+      <strong>Group: </strong><span class="chat-name">Gringos imaveryveryverybigname</span>
+      <br><a href="/index.html">See other chats...</a>
+    </p>
+  </nav>
+  <div id="current-messages">
+    <span><strong>Current message:</strong></span>
+    <!---FIXME: chat_id--->
+    <iframe src="current-message.html?chat_id=2355222"></iframe>
+  </div>
+  <div id="chatlog">
+    <span><strong>Chat log:</strong></span>
+    <!---FIXME: chat_id--->
+    <iframe src="/chatlog.html?chat_id=23423445"></iframe>
+  </div>
+  <!---FIXME: send-message logic--->
+  <div id="send-message">
+    <textarea name="message-to-send" class="send-message-text" rows=5></textarea>
+    <br>
+    <button>Send Message</button>
+  </div>
+</main>
+</body>
+</html>

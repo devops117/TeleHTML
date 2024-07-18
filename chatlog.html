@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="telegram client: TeleHTML">
+  <title>TeleHTML</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    #new-message-notif {
+      width: 250px;
+      font-size: 16px;
+      position: sticky;
+      top: 0;
+      background-color: black;
+      color: white;
+      display: grid;
+      text-align: center;
+      align-content: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #new-message-notif > iframe {
+      border: none;
+      height: 22px;
+      width: 150px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <!---FIXME: onload_message_id--->
+  <span id="new-message-notif">
+    <strong>Notification: </strong>
+    <iframe src="new-message-notification.html?chat_id=214234&onload_message_id=24342"></iframe>
+  </span>
+  <nav>
+    <a href="/chatlog.html?chat_id=23432">Load newest messages</a>
+    <br>
+    <span>load messages:
+      <strong>
+	<a href="/chatlog.html?chat_id=23432&onload_message_id=24342&offset=5">+5</a> |
+        <a href="/chatlog.html?chat_id=23432&onload_message_id=24342&offset=-5">-5</a>
+      </strong>
+    </span>
+  </nav>
+  <div class="messages">
+    <hr>
+    <p class="message">
+      <span class="message-id">
+        <a href="/get_message?from_chat=23354234&message_id=245523" target="_blank">52324422</a> |
+      </span>
+      <span class="message-sender-name">Macron</span> -
+      <span class="message-time">18/02/24-11:03</span>:
+      <br>
+      <span class="message-text">check the new release</span>
+    </p>
+    <hr>
+    <p class="message">
+      <span class="message-id">
+        <a href="/get_message?from_chat=23354234&message_id=245523" target="_blank">34424422</a> |
+      </span>
+      <span class="message-sender-name">Yuki</span> -
+      <span class="message-time">18/02/24-11:05</span>:
+      <br>
+      <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis tempus lorem aliquet sollicitudin. Phasellus interdum dapibus semper. Donec dictum massa at nisi egestas pharetra. Donec laoreet dolor orci, eu malesuada diam blandit nec. Cras eu sapien molestie justo accumsan efficitur sed quis quam. Sed pellentesque fringilla urna, nec malesuada ipsum commodo et. Pellentesque faucibus eu nunc non semper. Ut tincidunt eget tortor vitae iaculis. Praesent odio turpis, porttitor vitae odio ac, sodales auctor ipsum. Vivamus a mi sed est consectetur sodales ac in purus. Aenean efficitur ex eu ante venenatis suscipit.
+
+Etiam lacinia egestas urna non sodales. Morbi eget ante ornare, luctus justo ac, elementum magna. Donec malesuada enim ipsum, in suscipit tortor interdum eget. Nulla at metus sit amet nisl semper fringilla ac suscipit orci. Maecenas in condimentum est. Aenean dictum malesuada posuere. Donec scelerisque mauris et facilisis imperdiet.</span>
+    </p>
+  </div>
+</main>
+</body>
+</html>
